@@ -21,7 +21,13 @@ def main():
     print()
     for i in text:
         print('Мощность:', i)
-        print('Действительные биты:', one(i))
+        if int(i) < 0:
+            print('Невозможно...')
+            continue
+        if int(i) > 0:
+            print('Действительные биты:', one(i))
+        else:
+            print('Действительные биты:', 0)
         print('Целые биты:', two(i))
         print()
 
